@@ -9,7 +9,7 @@ abstract public class Unit : MonoBehaviour, IDamagable
 
     public Unit(IMovable movableBehaviour) => this.movableBehaviour = movableBehaviour;
 
-    public virtual void Move(Vector3 target) => movableBehaviour.Move(target);
+    abstract public void Move();
 
-    protected void GetDamage(int amountDamage) => health -= amountDamage;
+    public void GetDamage(int amountDamage) => health -= amountDamage;
 }

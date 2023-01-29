@@ -1,4 +1,6 @@
+using UnityEngine;
+
 public interface IMovable
 {
-    void Move(Vector3 target);
+    void Move(Vector3 target, Transform positionObject);
 }

@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class ControlledUnit : Unit
 {
-    public override void Move(Vector3 target) => base.Move(target);
+    public ControlledUnit(IMovable movableBehaviour) : base(movableBehaviour) {}
 
-    public ControlledUnit(IMovable movableBehaviour)
-    {
-        this.movableBehaviour = movableBehaviour;
-    }
-    private void Update() => Move(target);
+    public override void Move() => movableBehaviour.Move(target, transform);
+
+    private void Update() => Move();
 }
