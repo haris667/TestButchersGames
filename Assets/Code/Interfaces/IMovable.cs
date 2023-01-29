@@ -1,4 +1,4 @@
 public interface IMovable
 {
-    void Move();
+    void Move(Vector3 target);
 }
